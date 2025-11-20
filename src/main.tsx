@@ -1,18 +1,21 @@
 // src/main.tsx
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import App from "./App.tsx";
 
-import './styles/fonts.css';
-import './styles/globals.css';
-import './styles/index.css';
+import "./styles/fonts.css";
+import "./styles/globals.css";
+import "./styles/index.css";
 
-import { ThemeProvider } from './theme/ThemeContext';
+import { store } from "./store";
+import { ThemeSync } from "./ThemeSync";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
+    <Provider store={store}>
+      <ThemeSync />
       <App />
-    </ThemeProvider>
-  </StrictMode>,
+    </Provider>
+  </StrictMode>
 );
