@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--triplex-next-ColorDarkNeutral-50-1-1-1, #2d2d30);
+  background-color: var(--triplex-next-ColorNeutral-90-1-1-1, #f2f4f7);
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--triplex-next-ColorDarkNeutral-50-1-1-1, #2d2d30);
+  background-color: var(--triplex-next-ColorNeutral-90-1-1-1, #f2f4f7);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root[data-theme='light'] {
+  --triplex-next-ColorDarkNeutral-50-1-1-1: #2d2d30;
+  --triplex-next-ColorNeutral-90-1-1-1: #f2f4f7;
+}
+
+:root[data-theme='dark'] {
+  --triplex-next-ColorDarkNeutral-50-1-1-1: #f5f5f6;
+  --triplex-next-ColorNeutral-90-1-1-1: #18181a;
+}
+
+body {
+  margin: 0;
+  color: var(--triplex-next-ColorDarkNeutral-50-1-1-1, #2d2d30);
+  background-color: var(--triplex-next-ColorNeutral-90-1-1-1, #f2f4f7);
+}
+
+
+body,
+button,
+input,
+select,
+textarea,
+div,
+span {
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#root,
+#root * {
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+}
