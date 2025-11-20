@@ -10,15 +10,17 @@ export const ThemeSync = () => {
   useEffect(() => {
     const root = document.documentElement;
 
+    // data-theme="light|dark"
     root.setAttribute("data-theme", theme);
+
+    // классы для потенциальных css-правил
     root.classList.remove("triplex-theme-light", "triplex-theme-dark");
     root.classList.add(
       theme === "dark" ? "triplex-theme-dark" : "triplex-theme-light"
     );
 
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem(STORAGE_KEY, theme);
-    }
+    // localStorage
+    window.localStorage.setItem(STORAGE_KEY, theme);
   }, [theme]);
 
   return null;

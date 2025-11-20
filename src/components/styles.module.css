@@ -1,0 +1,6 @@
+/* App.css или отдельный файл */
+.theme-switcher {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}

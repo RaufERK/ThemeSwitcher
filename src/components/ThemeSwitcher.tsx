@@ -2,6 +2,7 @@
 import { Button, EButtonTheme, EButtonSize } from "@sberbusiness/triplex-next";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { setTheme } from "../store/themeSlice";
+import "./styles.module.css";
 
 export const ThemeSwitcher = () => {
   const theme = useAppSelector((state) => state.theme.value);
@@ -32,5 +33,3 @@ export const ThemeSwitcher = () => {
     </div>
   );
 };
-
-//
