@@ -16,7 +16,7 @@ import {
   ETextSize,
   ECaptionSize,
   ETitleSize,
-  EButtonSize,
+  EComponentSize,
 } from "@sberbusiness/triplex-next";
 
 export default function App() {
@@ -101,7 +101,7 @@ export default function App() {
               <Button
                 theme={EButtonTheme.GENERAL}
                 type="submit"
-                size={EButtonSize.MD}
+                size={EComponentSize.MD}
               >
                 Сохранить
               </Button>
@@ -134,7 +134,7 @@ export default function App() {
             ) : (
               <Button
                 theme={EButtonTheme.SECONDARY}
-                size={EButtonSize.SM}
+                size={EComponentSize.SM}
                 onClick={() => setAlertVisible(true)}
               >
                 Показать уведомление

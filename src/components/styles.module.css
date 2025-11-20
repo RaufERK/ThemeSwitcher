@@ -1,4 +1,4 @@
-/* App.css или отдельный файл */
+/* src/components/styles.module.css */
 .theme-switcher {
   display: flex;
   gap: 8px;

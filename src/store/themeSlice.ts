@@ -18,6 +18,9 @@ const themeSlice = createSlice({
     setTheme(state, action: PayloadAction<Theme>) {
       state.value = action.payload;
     },
+    toggleTheme(state) {
+      state.value = state.value === "light" ? "dark" : "light";
+    },
   },
 });
 

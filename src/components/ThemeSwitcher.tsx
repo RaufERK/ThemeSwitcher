@@ -1,8 +1,12 @@
 // src/components/ThemeSwitcher.tsx
-import { Button, EButtonTheme, EButtonSize } from "@sberbusiness/triplex-next";
+import {
+  Button,
+  EButtonTheme,
+  EComponentSize,
+} from "@sberbusiness/triplex-next";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { setTheme } from "../store/themeSlice";
-import "./styles.module.css";
+import styles from "./styles.module.css";
 
 export const ThemeSwitcher = () => {
   const theme = useAppSelector((state) => state.theme.value);
@@ -10,12 +14,12 @@ export const ThemeSwitcher = () => {
   const isLight = theme === "light";
 
   return (
-    <div className="theme-switcher">
+    <div className={styles.themeSwitcher}>
       <span>Тема:</span>
 
       <Button
         theme={isLight ? EButtonTheme.GENERAL : EButtonTheme.SECONDARY}
-        size={EButtonSize.MD}
+        size={EComponentSize.MD}
         type="button"
         onClick={() => dispatch(setTheme("light"))}
       >
@@ -24,7 +28,7 @@ export const ThemeSwitcher = () => {
 
       <Button
         theme={!isLight ? EButtonTheme.GENERAL : EButtonTheme.SECONDARY}
-        size={EButtonSize.MD}
+        size={EComponentSize.MD}
         type="button"
         onClick={() => dispatch(setTheme("dark"))}
       >
